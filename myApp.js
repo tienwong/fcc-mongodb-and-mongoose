@@ -138,6 +138,7 @@ const queryChain = (done) => {
   .limit(2)
   // hide the age
   .select('-age')
+  // executes the query after we are done building up the query in the chaining syntax
   .exec((err, data) => {
     if (err) return done(err)
     done(null, data)
